@@ -20,15 +20,9 @@ html {
 		padding-top:8px;
 		font-size:1.4em;
 	}
-	
-	
 	.navbar {
 		margin-top:0;
-		
 	}
-	
-	
-		
 }
 @media(min-width:767px) {
     .navbar {

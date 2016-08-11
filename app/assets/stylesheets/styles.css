@@ -50,9 +50,7 @@ p{
 }
 	
 
-	img {
-		
-	}
+
 .navbar {
 	background:transparent;
    min-height:135px;
@@ -186,15 +184,10 @@ footer a:hover {
 }
 
 footer {
-	
-	
 	margin-top:0px;
 	color: #fff;
 	text-align:center;
 	padding: 20px 0 20px;
-	
-	
-	
 }
 
 .footer-col {
@@ -222,9 +215,7 @@ footer {
 	font-size:1.1em;
 	text-transform:uppercase;
 	color:#56C3F4;
-	font-weight:400;
-	
-	
+	font-weight:400;	
 }
 
 
