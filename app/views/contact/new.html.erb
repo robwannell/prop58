@@ -1,0 +1,73 @@
+<div class="contact-jumbotron">
+    <!-- Intro Section -->
+    <section id="intro" class="intro-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                   
+					
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="sub-intro-section">
+        <div class="container">
+            <div class="row contact-form">
+													<div class="col-md-8 col-md-offset-2">
+                    <h2>Contact us</h2>
+																				
+		<%= bootstrap_form_for @contact, url: {:action=>'create'} do |f| %>	
+
+<%= f.text_field :firstname %>
+<%= f.text_field :lastname %>
+<%= f.email_field :email %>
+
+<%= f.text_area :message %>
+
+<h4>Add me as an Endorser</h4>
+<div class="clearfix"></div>
+
+<%= f.select :type,  [["Organization"], ["Company"], ["Individual"], ["Elected Official"]],{ include_blank: true , label: "Please choose one:" }, { class: "selectpicker" } %>
+
+<%= f.text_field :endorser, placeholder:"Name, title, you would like to be listed as", label:"Title / Organization" %>
+
+<%= f.text_field :mailingaddress, placeholder:"Street", label:"Mailing address" %>
+<%= f.text_field :city, placeholder:"City" %>
+<%= f.text_field :state, placeholder:"State" %>
+<%= f.text_field :zip, placeholder:"Zip" %>
+<%= f.text_field :phone, placeholder:"Phone" %>
+
+
+
+																																																																																																																																																																																																																																																																									
+
+<h4>Support Proposition 58</h4>
+<div class="clearfix"></div>
+
+
+<%= f.form_group :help do %><br/>
+
+<% @support.each do |item| %>
+<div class="checkbox" style="margin-left:20px"><%= check_box_tag "support[]", item %> <%= item %></div>
+
+<% end %>
+<% end %>
+<%= f.text_field :language, placeholder:"language(s)", hide_label: true  %>
+						
+				
+
+ <%= f.submit "Send", class: "btn btn-default btn-about pull-right" %>
+
+
+					
+				  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+				
+				<% end %>
+	

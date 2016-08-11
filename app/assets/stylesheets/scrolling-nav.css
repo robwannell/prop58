@@ -1,0 +1,155 @@
+/*!
+ * Start Bootstrap - Scrolling Nav HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+
+@media(min-width:991px) {
+	ul.nav a{
+		padding-top:8px;
+		font-size:1.4em;
+	}
+	
+	
+	.navbar {
+		margin-top:0;
+		
+	}
+	
+	
+		
+}
+@media(min-width:767px) {
+    .navbar {
+        padding: 0px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+				ul.nav a{
+					padding-top:0px;
+					font-size:1.4em;
+				}
+	
+				.navbar {
+					margin-top:0;
+		
+				}
+			}
+    .top-nav-collapse {
+        padding: 0;
+    }
+	
+			
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+	.navbar {
+	 	margin-top:0;
+	  background-color:;
+	   
+   
+	}
+	
+	
+		
+ }
+ @media (max-width: 992px) { 
+	 .navbar {
+	 	background:transparent;
+	    min-height:135px;
+	    margin-bottom:0;
+	    border:0px;
+	    border-bottom:0px;
+   
+	    text-transform: uppercase;
+	    font-family:  "proxima-nova",sans-serif;
+	    font-weight:bold;
+	 }
+		
+	ul.nav {
+		
+		font-size:0.6em;
+		padding-bottom:40px;
+	}
+	
+	
+	.footernav ul {
+		margin-left:0;
+		padding-left:0;
+	}
+	.footernav li{
+		
+		display:block;
+		clear:left;
+	}
+
+  }
+
+@media(max-width:767px) {
+	
+	.navbar {
+		
+	   min-height:80px;
+	   margin-bottom:0;
+	   padding-top:0px;
+				margin-top:0;
+	   text-align:left;
+				
+	   
+   
+	}
+	
+	
+	
+	
+	
+	
+	.logo-container {
+		width:20%;
+		
+		text-align:left;
+		
+	}
+	
+	.intro-section {
+	    min-height: 500px;
+	    padding-top: 50px;
+		padding-bottom:40px;
+	    text-align: center;
+  
+	}
+	
+	.intro-section h1 {
+		text-transform:uppercase;
+		color:#fff;
+		font-size:3.3em;
+		text-shadow: 2px 2px #333;
+	}
+
+	.intro-section h2 {
+		text-transform:uppercase;
+		color:#fff;
+		font-size:3em;
+		text-shadow: 2px 2px #333;
+	}
+
+}
+
+
+/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
+The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
+of those sections to manage the look and feel of the site. */
+

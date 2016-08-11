@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+        <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p>The following is a message sent via supportprop58.com at <%= Time.now.strftime('%F %T') %></p>
+								
+								<p> <%= @firstname %> <%= @lastname  %></p>
+								<p><%= @email  %></p>
+		<p>
+        <p><%= @message %></p>
+		
+		
+		<p><%= @mailingaddress %><br/>
+		<%=  @city %><br/>
+		<%=  @state %> <%= @zip %><br/></p>
+		
+		
+		
+		
+		
+		<% unless @support.blank? %><p>I would like to: </p><% end %>
+		<% unless @support.blank? %><% @support.each do |help|%>
+		<p><%= help %></p>
+			<% end%>
+			<% unless @language.blank? %><%= @language %><% end %>
+	
+		<% end %>
+		
+		
+    </body>
+</html>

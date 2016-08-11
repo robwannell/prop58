@@ -1,4 +1,22 @@
 Rails.application.routes.draw do
+ 
+
+ get 'contact/new'
+ resources :contact, only: [:new, :create]
+ get '/contact', to: 'contact#new'
+ 
+ match '/send_mail', to: 'contact#send_mail', via: 'post'
+ 
+  get 'donate/' => 'donate#index'
+
+  get 'support/' => 'support#index'
+
+  get 'endorsements' => 'endorsements#index'
+
+  get 'faq/' => 'faq#index'
+
+  get 'about/' => 'about#index'
+
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
