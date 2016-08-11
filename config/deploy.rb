@@ -3,7 +3,7 @@ set :repo_url, 'git@github.com:robwannell/prop58.git'
 
 set :deploy_to, '/home/deploy/prop58'
 
-set :rbenv_path, '/home/deploy/.rbenv/'
+
 
 set :linked_files, %w{}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
