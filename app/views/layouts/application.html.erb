@@ -82,7 +82,7 @@
 																		<li ><%= link_to 'Endorsements', endorsements_path, class:"#{'nav-active' if current_page? endorsements_url}" %></li>
 											   				<li ><%= link_to 'Support', support_path, class:"#{'nav-active' if current_page? support_url}" %></li>
 											   				<li ><%= link_to 'Contact', contact_url, class:"#{'nav-active' if current_page? contact_url}"  %></li>
-																		<li class=" hidden-md"><button class="btn btn-warning donate-top-link"><%= link_to 'Donate', donate_url, class:"#{'nav-active' if current_page? contact_url}"  %></button></li>
+																		<li class=" hidden-md"><button class="btn btn-warning donate-top-link"><%= link_to 'Donate', donate_url, class:"#{'nav-active' if current_page? donate_url}"  %></button></li>
               </ul>
             </div>
           </div>
@@ -107,12 +107,13 @@
 			  <div class="footnav  navbar-centered footer-nav footernav">
 						
 	              <ul class="">
-					   <li></li>
-	  				   <li></li>
-	  				<li></li>
-					<li></li>
-	                 <li></li>
-	                  <li></li>
+					   <li class="hidden-md hidden-sm hidden-xs"><%= link_to 'Home', root_url, class:"#{'nav-active' if current_page? root_url}" %></li>
+					   <li ><%= link_to 'About', about_path, class:"#{'nav-active' if current_page? about_url}"%></li>
+	    			<li ><%= link_to 'FAQ', faq_path, class:"#{'nav-active' if current_page? faq_url}"  %></li>
+								<li ><%= link_to 'Endorsements', endorsements_path, class:"#{'nav-active' if current_page? endorsements_url}" %></li>
+	   				<li ><%= link_to 'Support', support_path, class:"#{'nav-active' if current_page? support_url}" %></li>
+	   				<li ><%= link_to 'Contact', contact_url, class:"#{'nav-active' if current_page? contact_url}"  %></li>
+							
 	              </ul>
 			  </div>
 					
@@ -126,6 +127,16 @@
 			  
 	  <div class="footnav">
         
+								
+					   <li class="hidden-md hidden-sm hidden-xs"><%= link_to 'Home', root_url, class:"#{'nav-active' if current_page? root_url}" %></li>
+					   <li ><%= link_to 'About', about_path, class:"#{'nav-active' if current_page? about_url}"%></li>
+	    			<li ><%= link_to 'FAQ', faq_path, class:"#{'nav-active' if current_page? faq_url}"  %></li>
+								<li ><%= link_to 'Endorsements', endorsements_path, class:"#{'nav-active' if current_page? endorsements_url}" %></li>
+	   				<li ><%= link_to 'Support', support_path, class:"#{'nav-active' if current_page? support_url}" %></li>
+	   				<li ><%= link_to 'Contact', contact_url, class:"#{'nav-active' if current_page? contact_url}"  %></li>
+								<li class=" hidden-md"><button class="btn btn-warning donate-top-link"><%= link_to 'Donate', donate_url, class:"#{'nav-active' if current_page? donate_url}"  %></button></li>
+								
+								
   </div>
 	  <div class="clear"></div>
        
@@ -145,9 +156,6 @@
    
    
    
-  
-    <script src="js/jquery.js"></script>
-	<script src="js/parsley.js"></script>
 
   
   
