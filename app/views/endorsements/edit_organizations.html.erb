@@ -1,0 +1,99 @@
+
+<%= content_for :jumbotron do %>
+<div class="endorsements-jumbotron">
+    <!-- Intro Section -->
+    <section id="intro" class="intro-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                   
+					
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+					
+<% end %>														
+<div class="sub-intro-section">
+        <div class="container">
+            <div class="row ">
+								 <h2>Endorsements for LEARN</h2>
+														
+	<% if current_user %><div class="edit alert" >
+	 <%= link_to ' Add a new endorsement', new_endorsement_path, class: "admin-edit fa fa-plus", dismissible: true %>
+
+	 <button class="close" data-dismiss="alert" type="button">
+	     <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+	   </button>
+
+	 </div>
+	 <% end %>
+		
+															
+			 
+			  <p>This initiative expands opportunities for all students and is supported by a bipartisan coalition of parents, educators and business leaders.</p>
+									
+						<h3>To add your name to the growing list of LEARN supporters, just <%= link_to 'fill out this form', contact_path %>.</h3>					
+									
+									
+
+</p>
+
+</div>
+</div>
+</div>
+   
+    <section class="a-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 endorsers">
+                    <h2>Organizations</h2>
+																				
+<table class="table  " id="sortable">
+  
+ 
+    <% @endorsement.where(:category => '1').each do |endorsement| %>
+      <tr data-item-id=<%= "#{endorsement.id}" %> class="item table-sortable">
+        <td >
+          <%= endorsement.organization %>
+        
+															<% if current_user %>
+														<span class="edit-endorsement edit" >
+								 <i> <%= link_to ' Edit ', edit_endorsement_path(endorsement), class: "admin-edit fa fa-edit", dismissible: true %> </i>|<i> <%= link_to ' Delete', endorsement, method: :delete, data: { confirm: 'Are you sure?' }, class: "admin-edit fa fa-trash" %></i>
+ 
+ 
+   
+								 </span>
+         	<% end %>
+        </td>
+      </tr>
+    <% end %>
+ 
+</table>
+
+
+														 
+																																																
+
+                </div>
+            </div>
+        </div>
+    </section>
+	
+
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																					    <section class="b-section">
+																																																																																																																																																																																																																																				        <div class="container">
+																																																																																																																																																																																																																													            <div class="row">
+																																																																																																																																																																																																																																																																																													                <div class="col-lg-10 col-lg-offset-1">
+<div class="support-58">
+																																																														<h1>Support our students by adding your name 
+to the list of endorsers that are voting YES on 58</h1>
+																																																				<p><%= link_to 'Support Prop 58', support_path, class: "btn btn-primary" %></p>																																																																																																																																																																																																																																																																																																							                </div>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													            </div>
+																																																																																																																																																																																																																																																																																																																																																												        </div>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											    </section>
+	
+	
+    

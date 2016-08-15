@@ -1,5 +1,21 @@
 Rails.application.routes.draw do
  
+ resources :endorsements do
+   post :update_row_order, on: :collection
+ end
+
+  resources :endorsements
+ # Login and Logout
+    get '/signup' => 'users#new'
+    post '/users' => 'users#create'
+    get 'users', to: 'users#index'
+    
+    
+# these routes are for showing users a login form, logging them in, and logging them out.
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+    
 
  get 'contact/new'
  resources :contact, only: [:new, :create]
@@ -7,11 +23,17 @@ Rails.application.routes.draw do
  
  match '/send_mail', to: 'contact#send_mail', via: 'post'
  
+ get 'admin/' => 'admin#index'
+ 
   get 'donate/' => 'donate#index'
 
   get 'support/' => 'support#index'
+  
+   get 'edit_organizations' => 'endorsements#edit_organizations'
 
   get 'endorsements' => 'endorsements#index'
+  
+ 
 
   get 'faq/' => 'faq#index'
 

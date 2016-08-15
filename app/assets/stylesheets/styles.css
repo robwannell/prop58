@@ -39,8 +39,7 @@ h1, h2 {
   }
 p{
 	margin-top:20px;
-	
-    font-weight:200;
+	font-weight:200;
 	font-size:1.5em;
     }
 	
@@ -57,7 +56,7 @@ p{
    margin-bottom:0;
    border:0px;
    border-bottom:0px;
-   font-size:1.2em;
+   font-size:1em;
    text-transform: uppercase;
    font-family:  "proxima-nova",sans-serif;
    font-weight:bold;
@@ -448,33 +447,8 @@ footer {
 	
 }
 
-/* contact form */
 
 
-.bs-callout {
-	width:70%;
-	margin:0px auto;
-	text-align:center;
-	padding:20px;
-	color:#F90C0C;
-	border:1px solid #F90C0C;
-}
-
-li.parsley-required, li.parsley-type {
-	color: #F90C0C;
-	list-style:none;
-	margin-left:5px;
-	padding-left:5px;
-	
-}
-
-input.parsley-error,
-select.parsley-error,
-textarea.parsley-error {
-  color: #F90C0C;
-  background-color: #FFECEC;
-  border: 1px solid #F90C0C;
-}
 
 .breather {
 	margin-top:50px;
@@ -576,31 +550,6 @@ b {
 
 }
 
-.bs-callout {
-	width:70%;
-	margin:0px auto;
-	text-align:center;
-	padding:20px;
-	color:#F90C0C;
-	border:1px solid #F90C0C;
-	background-color:#FFECEC;
-}
-
-li.parsley-required, li.parsley-type {
-	color: #F90C0C;
-	list-style:none;
-	margin-left:5px;
-	padding-left:5px;
-	
-}
-
-input.parsley-error,
-select.parsley-error,
-textarea.parsley-error {
-  color: #F90C0C;
-  background-color: #FFECEC;
-  border: 1px solid #F90C0C;
-}
 
 .anedot-form{
 	padding-top:30px;
@@ -611,3 +560,90 @@ textarea.parsley-error {
 	font-size:1.6em;
 	margin-left:30px;
 }
+
+.login{
+	border:2px solid #B1E4F9;
+	padding:40px 40px 0px;
+	margin-top:50px;
+	margin-bottom:50px;
+font-family:  "proxima-nova",sans-serif;
+	
+}
+
+.login h1, .admin-panel h1{
+color:#555;
+font-family:  "proxima-nova",sans-serif;
+text-shadow:none;
+	
+}
+
+.login fieldset {
+	font-weight:bold;
+}
+.login-field input{
+	
+	font-weight:bold;
+	padding:10px;
+	color:#333;
+	width:100%;
+}
+
+.admin {
+	margin-top:100px;
+	margin-bottom:200px;
+}
+
+.admin-panel {
+	width:600px;
+	margin:0px auto;
+	margin-top:50px;
+	margin-bottom:50px;
+
+}
+
+.form-errors p{
+	color:#FF0000;
+	padding:10px;
+	color: #E74A42;
+	background: #FFCCCC;
+}
+
+.edit {
+	
+	width:300px;
+	padding: 5px 10px;
+	color:#5CC9F5;
+		margin:0px auto;
+		text-transform:uppercase;
+	margin-bottom:20px;
+	background-color:#F1FBFF;
+	
+}
+
+.edit a {
+	color:#5CC9F5;
+	font-weight:bold;
+	font-weight:400;
+	
+}
+
+.edit-endorsement {
+			font-size:.8em;
+}
+.close {
+	margin-top:-2px;
+	color:#09BAFF;
+}
+
+
+.table {
+    border-bottom:0px !important;
+}
+.table th, .table td {
+	font-size:1.4em;
+    border: 1px !important;
+}
+.fixed-table-container {
+    border:0px !important;
+}
+

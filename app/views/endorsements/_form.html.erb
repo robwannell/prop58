@@ -1,0 +1,44 @@
+
+	
+	
+<%= bootstrap_form_for(@endorsement) do |f| %>
+  <% if @endorsement.errors.any? %>
+    <div id="error_explanation" class="form-errors">
+      <p><%= pluralize(@endorsement.errors.count, "error") %> prohibited this endorsement from being saved:</p>
+
+      
+    </div>
+  <% end %>
+
+
+ <fieldset class="form-group">
+ 
+ <div class="controls login-field">
+  <%= f.text_field :title, placeholder: "Governor, Councilmember, etc", label: "Title (for electeds)"%>
+ </div>
+	
+  <div class="controls login-field">
+	  <%= f.text_field :firstname %>
+  </div>	
+		
+  <div class="controls login-field">
+	  <%= f.text_field :lastname %>
+  </div>
+		
+ 
+  <div class="controls login-field">
+	  <%= f.text_field :organization, label: "Organization / District (or office to be displayed after name)"%>
+  </div>
+		
+  <div class="controls login-field">
+	<%= f.select :category,  [["Organization", 1], [ "Elected Official",2], ["Educators and Community Leaders",3], ["School District",4] ],{ include_blank: true , label: "Please choose one:" }, { class: "selectpicker" } %>
+  </div>
+  
+</fieldset>
+
+  <div class="actions pull-right">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+

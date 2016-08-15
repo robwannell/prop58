@@ -1,0 +1,9 @@
+<div class="admin">
+
+	<h1>Listing Users</h1>
+	
+	<% @users.each do |u| %>
+	<p><%= u.name %> - <%= u.email %>
+		<% end %>
+		
+	</div>

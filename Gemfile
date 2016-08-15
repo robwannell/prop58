@@ -22,8 +22,14 @@ gem 'capistrano-rails', '~> 1.1.1'
 # Add this if you're using rbenv
 gem 'capistrano-rbenv', github: "capistrano/rbenv"
 
-
+gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'bootstrap_form'
+
+gem 'bcrypt', '~> 3.1.7'
+gem 'ranked-model'
+
+gem 'jquery-ui-rails'
+gem 'jquery-turbolinks'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

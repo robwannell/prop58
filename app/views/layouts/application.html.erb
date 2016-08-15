@@ -20,12 +20,12 @@
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	
-   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
- <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
    <%= csrf_meta_tags %>
 			
-			
+		 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		 <%= javascript_include_tag 'application' %>
 	
 	
   
@@ -45,7 +45,7 @@
 
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" data-no-turbolink>
 	
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -71,7 +71,9 @@
                 <span ><i class="fa fa-bars" aria-hidden="true"></i></span>
                
               </button>
-              <a class="navbar-brand" href="index.php"><%= image_tag 'logo', class: "hidden-sm hidden-xs logo-default" %><%= image_tag 'logo200.png', class: "visible-sm visible-xs logo-small" %></a>
+              <a class="navbar-brand" href="/">
+															<% if current_user %><%= image_tag 'logo200.png', class: "logo-small" %><% else %>
+															<%= image_tag 'logo', class: "hidden-sm hidden-xs logo-default" %><%= image_tag 'logo200.png', class: "visible-sm visible-xs logo-small" %><% end %></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
              
@@ -94,8 +96,40 @@
  
 
  
+	<div class="container">
+	
+		
 
-<%= yield %>
+
+	</div>
+	
+<%= yield :jumbotron %>
+
+
+<div class=" main">
+	<%= yield :login %>
+	<%= yield :override %>
+
+	<div class="row">
+	  <div class="col-md-12">
+				
+				<% if notice %>
+				<div class="notices">
+				  <h2 class="alert alert-success"><%= notice %></h2>
+				</div>
+				<% end %>
+				<% if alert %>
+				<div class="notices">
+				  <h2 class="alert alert-danger"><%= alert %></h2>
+				</div>
+				<% end %>
+				
+				
+				<%= yield %></div>
+	 
+	</div>
+	
+</div>
 
 <%= render '/layouts/banner.html.erb' %>
 
@@ -132,6 +166,13 @@
 	  <div class="paidforby"><p>&copy; <%= Time.now.year %>. Yes on 58, Californians for English Proficiency sponsored by teachers and service employees organizations.
 		  
 		 <br/>ID# 1386477</p></div>
+			
+			<p><% if current_user %>
+  Signed in as <%= current_user.name %> | <%= link_to "Admin", '/admin' %> | <%= link_to "Logout", '/logout' %>
+<% else %>
+  <%= link_to 'Login', '/login' %> 
+<% end %>
+</p>
 	
 	
 	<p>
@@ -167,4 +208,9 @@
 
 
 </body>
+
+<script>
+$(".notices" ).fadeOut(3000);
+</script>
+
 </html>

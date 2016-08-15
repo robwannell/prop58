@@ -24,6 +24,17 @@ html {
 		margin-top:0;
 	}
 }
+
+@media(max-width:767px) {
+    .navbar {
+					font-size:2em;
+    }
+			
+			
+}
+
+
+
 @media(min-width:767px) {
     .navbar {
         padding: 0px 0;
