@@ -2,12 +2,16 @@
   border-radius: 0 !important;
 }
 
-.navbar-toggle {
+.navbar-toggler {
 	color:#fff;
 	margin-top:20px;
 }
 
-.navbar-toggle a {
+.navbar-toggler a {
+	color:#fff;
+}
+
+.icon-bar {
 	color:#fff;
 }
 
@@ -20,6 +24,7 @@
     border-top:none;
     box-shadow:none;
 }
+
 
 h1, h2 {
   font-family: "capitolium-news-2",sans-serif;
@@ -50,17 +55,7 @@ p{
 	
 
 
-.navbar {
-	background:transparent;
-   min-height:135px;
-   margin-bottom:0;
-   border:0px;
-   border-bottom:0px;
-   font-size:1em;
-   text-transform: uppercase;
-   font-family:  "proxima-nova",sans-serif;
-   font-weight:bold;
-}
+
 
 .navbar .page-scroll a {
 	color:#fff;
@@ -97,14 +92,14 @@ ul.nav {
 	
 }
 ul.nav a {
-	color:#fff;
+	 color:#CEE9FD;
 	
 }
 
 ul.nav a {
 	padding:5px 12px;
    
-    font-size:1.2em;
+    font-size:1em;
 }
 ul.nav a:hover { color: #fff !important; 
 }
@@ -113,29 +108,65 @@ ul.nav a:hover { color: #fff !important;
 	font-weight:bold; 
 }
 
-.navbar-default .navbar-nav > li > a {
-	padding-top:60px;
-   color:#CEE9FD;
+.navbar .container-fluid>.navbar-header {
+  float: left;
+  margin-right: 10px;
+}
+.navbar .navbar-nav {
+		margin-top:55px;
+  float: left;
+		text-align:right;
+		
+}
+.nav>li {
+  float: left;
+		padding:0px 5px;
 }
 
-.donate-top-link {
-	margin-top:50px;
+.navbar {
+	background:transparent;
+   min-height:100px;
+   margin-bottom:0;
+   border:0px;
+   border-bottom:0px;
+   font-size:1.2em;
+   text-transform: uppercase;
+   font-family:  "proxima-nova",sans-serif;
+   font-weight:bold;
+		
+}
+
+.navbar-toggleable-sm {
+	text-align:center;
+}
+
+
+
+.navbar-brand {
+	padding-top:20px;
+	padding-bottom:10px;
+	padding-right:30px;
+}
+.donate-button {
+	background:#ff6600;
 	text-transform:uppercase;
-	padding:5px 0px 3px;
+	padding:5px;
+	margin-top:-3px;
 	font-size:1em;
 }
 
-.donate-top-link a {
+.donate-button a {
 	font-weight:bold;
+	color:#fff;
 }
 
-.donate-top-link a:hover {
+.donate-button a:hover {
 	text-decoration:none;
 }
 
 .navbar .navbar-nav {
   display: inline-block;
-  float: none;
+  float: left;
   vertical-align: top;
 }
 
@@ -556,10 +587,7 @@ b {
 }
 
 
-.donate-btn {
-	font-size:1.6em;
-	margin-left:30px;
-}
+
 
 .login{
 	border:2px solid #B1E4F9;

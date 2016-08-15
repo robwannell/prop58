@@ -15,15 +15,7 @@ html {
 }
 
 
-@media(min-width:991px) {
-	ul.nav a{
-		padding-top:8px;
-		font-size:1.4em;
-	}
-	.navbar {
-		margin-top:0;
-	}
-}
+
 
 @media(max-width:767px) {
     .navbar {
@@ -35,50 +27,40 @@ html {
 
 
 
-@media(min-width:767px) {
-    .navbar {
-        padding: 0px 0;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
-    }
-				ul.nav a{
-					padding-top:0px;
-					font-size:1.4em;
-				}
-	
-				.navbar {
-					margin-top:0;
-		
-				}
-			
-    .top-nav-collapse {
-        padding: 0;
-    }
-	
-			
-}
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
+@media (max-width: 992px) { 
 	.navbar {
-	 	margin-top:0;
+	 	
 	 
 	   
    
 	}
 	
-	
+	ul.nav {
+
+		
+		
+	}
+	.navbar .navbar-nav {
+			font-size:0.8em;
+	  float: none;
+			clear:left;
+		
+	}
+
 		
  }
  @media (max-width: 992px) { 
+		
+		
 	 .navbar {
 	 	background:transparent;
 	    min-height:135px;
 	    margin-bottom:0;
 	    border:0px;
 	    border-bottom:0px;
-   
+   	
 	    text-transform: uppercase;
 	    font-family:  "proxima-nova",sans-serif;
 	    font-weight:bold;
@@ -87,10 +69,15 @@ html {
 	ul.nav {
 		
 		font-size:0.6em;
-		padding-bottom:40px;
+		
 	}
 	
-	
+	.nav>li {
+		font-size:0.8em;
+		text-align:center;
+		padding:0px 0;
+		
+	}
 	.footernav ul {
 		margin-left:0;
 		padding-left:0;
@@ -100,6 +87,9 @@ html {
 		display:block;
 		clear:left;
 	}
+	
+	
+	
 
   }
 
@@ -107,18 +97,33 @@ html {
 	
 	.navbar {
 		
-	   min-height:80px;
-	   margin-bottom:0;
-	   padding-top:0px;
-				margin-top:0;
-	   text-align:left;
+ 	background:transparent;
+    min-height:135px;
+    margin-bottom:0;
+    border:0px;
+    border-bottom:0px;
+  	
+    text-transform: uppercase;
+    font-family:  "proxima-nova",sans-serif;
+    font-weight:bold;
 				
 	   
    
 	}
 	
 	
-	
+	.nav>ul {
+		margin-top:120px;
+		clear:left;
+		padding-top:40px;
+	}
+	.nav>li {
+		font-size:1em;
+		text-align:center;
+		padding:20px 0;
+		
+	  float: none;
+	}
 	
 	
 	
