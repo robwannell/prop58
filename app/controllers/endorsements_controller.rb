@@ -6,24 +6,13 @@ before_filter :authorize, except: [:index]
 
    
   def index
-    @endorsement = Endorsement.rank(:row_order).all
+    @endorsement = Endorsement.all
  
   end
   
  
 
-  def update_row_order
-      @endorsement = Endorsement.find(endorsement_params[:endorsement_id])
-      @endorsement.row_order_position = endorsement_params[:row_order_position]
-      @endorsement.save
-
-      render nothing: true # this is a POST action, updates sent via AJAX, no view rendered
-    end
-
-   
-      
-      
-  # 
+  
   def show
    
   end
@@ -83,6 +72,6 @@ before_filter :authorize, except: [:index]
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def endorsement_params
-      params.require(:endorsement).permit(:endorsement_id, :firstname, :lastname, :title, :organization, :row_order_position, :category)
+      params.require(:endorsement).permit(:endorsement_id, :firstname, :lastname, :title, :organization, :ranking, :category)
     end
 end

@@ -1,3 +1,9 @@
+.alert-success {
+	font-family:  "proxima-nova",sans-serif;
+	background:#93C960;
+}
+
+
 .navbar {
   border-radius: 0 !important;
 }
@@ -102,6 +108,7 @@ ul.nav a {
     font-size:1em;
 }
 ul.nav a:hover { color: #fff !important; 
+	text-decoration:none;
 }
 
 .nav-active { color: #fff !important;
@@ -124,7 +131,7 @@ ul.nav a:hover { color: #fff !important;
 }
 
 .navbar {
-	background:transparent;
+	
    min-height:100px;
    margin-bottom:0;
    border:0px;
@@ -153,9 +160,16 @@ ul.nav a:hover { color: #fff !important;
 	padding:5px;
 	margin-top:-3px;
 	font-size:1em;
+	color:#fff;
 }
 
-.donate-button a {
+.footer-donate {
+	margin-left:20px;
+}
+
+
+
+.donate-button {
 	font-weight:bold;
 	color:#fff;
 }
@@ -163,6 +177,11 @@ ul.nav a:hover { color: #fff !important;
 .donate-button a:hover {
 	text-decoration:none;
 }
+
+.donation btn a{
+	color:#fff;
+}
+
 
 .navbar .navbar-nav {
   display: inline-block;
@@ -174,6 +193,32 @@ ul.nav a:hover { color: #fff !important;
   text-align: center;
 }
 
+
+.drops {
+	width:220px;
+	font-size:1em;
+	
+}
+
+.drops a {
+	color:#2A6288 !important;;
+}
+.droppy {
+	display:block;
+}
+
+.droppy a{
+	padding:5px;
+}
+.droppy:hover {
+	
+	color:#fff !important;
+	background-color:#5CC9F5;
+}
+
+.dropdown:hover .dropdown-menu {
+display: block;
+}
 
 footer {
     min-height: 200px;
@@ -605,7 +650,7 @@ text-shadow:none;
 	
 }
 
-.login fieldset {
+fieldset {
 	font-weight:bold;
 }
 .login-field input{
@@ -675,3 +720,61 @@ text-shadow:none;
     border:0px !important;
 }
 
+
+.actions input{
+	background:#EAF9FE;
+	color:#5CC9F5;
+}
+
+.actions input:hover{
+	background:#5CC9F5;
+	color:#fff;
+}
+
+.badge {
+	background:#eee;
+	color:#999;
+	padding:5px;
+	font-size:0.6em;
+	 border-radius: 10px;
+		margin-top:-10px;
+		margin-right:10px;
+}
+
+.admin-info {
+	background:#FAF5C6;
+	padding:5px 10px;
+	color:#93C960;
+	border-radius: 5px;
+	margin-bottom:20px;
+}
+
+.admin-info p {
+	padding:0px 0;
+	font-size:1em;
+	font-weight:bold;
+}
+
+.rails-bootstrap-forms-date-select,
+.rails-bootstrap-forms-time-select,
+.rails-bootstrap-forms-datetime-select {
+  select {
+    display: inline-block;
+    width: auto;
+  }
+}
+.rails-bootstrap-forms-error-summary {
+  margin-top: 10px;
+}
+
+.news-story {
+	text-align:left;
+}
+.news-story h1, .news-story h2, .news-story h3 {
+	text-align:left;
+}
+
+.news-story p{
+	font-weight:normal;
+	font-size:1em;
+}

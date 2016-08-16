@@ -14,6 +14,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
  gem 'therubyracer', platforms: :ruby
 
+gem 'friendly_id', '~> 5.1.0'
 
 gem 'capistrano', '~> 3.1.0'
 gem 'capistrano-bundler', '~> 1.1.2'
@@ -28,8 +29,15 @@ gem 'bootstrap_form'
 gem 'bcrypt', '~> 3.1.7'
 gem 'ranked-model'
 
+gem 'summernote-rails'
+gem 'bootstrap-sass'
+
 gem 'jquery-ui-rails'
 gem 'jquery-turbolinks'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

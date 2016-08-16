@@ -1,0 +1,27 @@
+<div class="intro-section">
+        <div class="container">
+            <div class="row ">
+
+<div class="news-story col-md-10 offset-md-1">
+<p>
+  <h2>
+  <%= @pressrelease.title %>
+</h2>
+
+<h5>Published: 
+  
+  <%= @pressrelease.publish_at %>
+</h5>
+
+<h6>
+ 
+  <%= @pressrelease.intro %>
+</h6>
+
+
+  <%= simple_format(@pressrelease.body) %>
+</p>
+</div>
+</div>
+</div>
+</div>

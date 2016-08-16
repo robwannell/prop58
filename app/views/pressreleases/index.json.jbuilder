@@ -1,0 +1,1 @@
+json.array! @pressreleases, partial: 'pressreleases/pressrelease', as: :pressrelease

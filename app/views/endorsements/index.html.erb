@@ -50,14 +50,16 @@
             <div class="row">
                 <div class="col-lg-10 offset-md-1 endorsers">
                     <h2>Organizations</h2>
+																	
 																				
-<table class="table  " id="sortable">
+<table class="table" >
   
  
     <% @endorsement.each do |endorsement| %>
 				<% if endorsement.category == '1' %>
-      <tr data-item-id=<%= "#{endorsement.id}" %> class="item table-sortable">
-        <td >
+      <tr class="item">
+        <td>
+									<% if current_user %><span class="badge"> <%= endorsement.ranking %></span><% end %>
           <%= endorsement.organization %>
         
 															<% if current_user %>
@@ -96,8 +98,10 @@
  
       <% @endorsement.each do |endorsement| %>
 						<% if endorsement.category == '2' %>
-      <tr data-item-id=<%= "#{endorsement.id}" %> class="item table-sortable">
+      <tr  class="item">
         <td >
+										<% if current_user %><span class="badge"> <%= endorsement.ranking %></span><% end %>
+										
           <%= endorsement.title %> <%= endorsement.firstname %> <%= endorsement.lastname %> <%= endorsement.organization %>
         
 															<% if current_user %>
@@ -129,9 +133,11 @@
  
 																																																																																																																																													      <% @endorsement.each do |endorsement| %>
 																																																																																																																																																			<% if endorsement.category == '3' %>
-																																																																																																																																															      <tr data-item-id=<%= "#{endorsement.id}" %> class="item table-sortable">
+																																																																																																																																															      <tr class="item">
 																																																																																																																																															        <td >
-																																																																																																																																															        <%= endorsement.title %> <%= endorsement.firstname %> <%= endorsement.lastname %><% unless endorsement.organization.blank? %>, <b><%= endorsement.organization %></b><% end %> 
+																																																																																																																																															       	<% if current_user %><span class="badge"> <%= endorsement.ranking %></span><% end %>
+																																																																																																																																																							
+																																																																																																																																																							 <%= endorsement.title %> <%= endorsement.firstname %> <%= endorsement.lastname %><% unless endorsement.organization.blank? %>, <b><%= endorsement.organization %></b><% end %> 
         
 																																																																																																																																																														<% if current_user %>
 																																																																																																																																																													<span class="edit-endorsement edit" >
@@ -156,7 +162,8 @@
 																																																																																																																																																<% if endorsement.category == '4' %>
 																																																																																																																																													      <tr data-item-id=<%= "#{endorsement.id}" %> class="item table-sortable">
 																																																																																																																																													        <td >
-																																																																																																																																													         <%= endorsement.organization %>
+																											<% if current_user %><span class="badge"> <%= endorsement.ranking %></span><% end %>
+																																																																																																																																															         <%= endorsement.organization %>
         
 																																																																																																																																																												<% if current_user %>
 																																																																																																																																																											<span class="edit-endorsement edit" >

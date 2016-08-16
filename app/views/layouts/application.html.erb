@@ -78,6 +78,16 @@
 											   <li ><%= link_to 'About', about_path, class:"#{'nav-active' if current_page? about_url}"%></li>
 							    			<li ><%= link_to 'FAQ', faq_path, class:"#{'nav-active' if current_page? faq_url}"  %></li>
 														<li ><%= link_to 'Endorsements', endorsements_path, class:"#{'nav-active' if current_page? endorsements_url}" %></li>
+															
+												 		<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">News<span class="caret"></span></a>
+																		<ul class="dropdown-menu drops" role="menu">
+																		<li class="droppy"><%= link_to 'Press Releases', pressreleases_path %></li>
+																		<li class="droppy"><%= link_to 'In the News', '#' %></li>
+																		
+																		</ul>
+																		</li>
+															
+															
 							   				<li ><%= link_to 'Support', support_path, class:"#{'nav-active' if current_page? support_url}" %></li>
 							   				<li ><%= link_to 'Contact', contact_url, class:"#{'nav-active' if current_page? contact_url}"  %></li>
 														<li class="visible-md-up"><button class="btn btn-warning donate-button"><%= link_to 'Donate', donate_url, class:"#{'nav-active' if current_page? donate_url} "  %></button></li>
@@ -150,7 +160,7 @@
 						<a href="https://www.facebook.com/YES-on-Prop-58-The-LEARN-Initiative-1089824417757601/" target="_blank"><%= image_tag 'fb' %> </a>
 						<a href="https://twitter.com/yesprop58" target="_blank"><%= image_tag 'twitter' %></a>
 						
-								<a href="donate.php" ><button class="btn btn-warning donate-btn ">DONATE</button></a>
+								<a href="donate.php" ><button class="btn btn-warning donate-btn footer-donate">DONATE</button></a>
 					</div>
 			  
 			  
@@ -158,7 +168,9 @@
 	  <div class="clear"></div>
        
 	   
-	  <div class="paidforby"><p>&copy; <%= Time.now.year %>. Yes on 58, Californians for English Proficiency sponsored by teachers and service employees organizations.
+	  <div class="paidforby"><p>&copy; <%= Time.now.year %>. Paid for by Yes on 58, Californians for English Proficiency sponsored by teachers and service employees organizations.  
+				<br/>Major funding by California Teachers Association/Issues PAC (committee)<br/> and Association of California School Administrators Issues Political Action Committee (ACSA Issues PAC).
+
 		  
 		 <br/>ID# 1386477</p></div>
 			
@@ -205,7 +217,7 @@
 </body>
 
 <script>
-$(".notices" ).fadeOut(3000);
+$(".notices" ).fadeOut(5000);
 </script>
 
 </html>

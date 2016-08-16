@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
  
+ 
+ resources :pressreleases
+ 
  resources :endorsements do
    post :update_row_order, on: :collection
  end
