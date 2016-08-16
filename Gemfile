@@ -30,7 +30,6 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'ranked-model'
 
 gem 'summernote-rails'
-gem 'bootstrap-sass'
 
 gem 'jquery-ui-rails'
 gem 'jquery-turbolinks'
