@@ -20,10 +20,10 @@
     <%= f.datetime_select :publish_at %>
   </div>
   <div class="field">
-    <%= f.text_area :intro %>
+    <%= f.text_area :intro, class: "edit-intro" %>
   </div>
    <div class="field">
-    <%= f.text_area :body, class: "edit-content", id: "summernote"%>
+    <%= f.text_area :body , id: "summernote"%>
   </div>
   <div class="actions pull-right">
     <%= f.submit %>
@@ -38,11 +38,12 @@ $('#summernote').summernote({
 	popover:false,
   toolbar: [
     // [groupName, [list of button]]
+			 ['para', ['style', 'ul']],
 	  ['insert', ['link']],
 	  ['image', ['none']],
-    ['style', ['bold', 'italic', 'underline', 'clear']],
-    ['para', ['style', 'ul', 'ol']]
+    ['style', ['bold', 'italic', 'underline', 'clear']]	
+   
   ],
-		
+		styleTags: ['p', 'h4']
 });
 </script>

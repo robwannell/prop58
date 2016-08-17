@@ -1,8 +1,33 @@
-<div class="intro-section">
-        <div class="container">
-            <div class="row ">
-								 <h1>Press Releases</h1>
+<%= content_for :full do %>
+       
+													<div class="col-md-8 full">
 														
+								 <h1>Press Releases</h1>
+				
+				<p>For more information, please contact Communications Director:
+					 <br/><strong>Robin Swanson</strong>, tel: (916) 204-6890</p>
+				
+				<% @pressreleases.each do |pr| %>
+				
+				<div class="prs">
+				<h2><%= link_to pr.title, pr %></h2>
+				<h6 class="text-muted"><%= pr.publish_at.strftime("%B %d %Y")%></h6> 
+				 <p class="intro-p"><%= pr.intro %> <span class="read-more"><%= link_to 'Read more', pr %> <i class="fa fa-arrow-right" aria-hidden="true"></i></span></p>
+					
+				</div>
+				<% end %>										
+
+</div>
+
+
+
+
+
+
+
+
+<div class="col-md-4 rh">
+	
 	<% if current_user %><div class="edit alert" >
 	 <%= link_to ' Add a new PR', new_pressrelease_path, class: "admin-edit fa fa-plus", dismissible: true %>
 
@@ -12,3 +37,7 @@
 
 	 </div>
 	 <% end %>
+</div>
+
+
+<% end %>

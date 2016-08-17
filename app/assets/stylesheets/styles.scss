@@ -51,7 +51,7 @@ h1, h2 {
 p{
 	margin-top:20px;
 	font-weight:200;
-	font-size:1.5em;
+	font-size:1.3em;
     }
 	
 .lead {
@@ -653,6 +653,10 @@ text-shadow:none;
 fieldset {
 	font-weight:bold;
 }
+
+input {
+	font-weight:normal;
+}
 .login-field input{
 	
 	font-weight:bold;
@@ -661,8 +665,12 @@ fieldset {
 	width:100%;
 }
 
+.edit-intro {
+	height:150px;
+	font-weight:normal;
+}
 .admin {
-	margin-top:100px;
+	padding-top:60px;
 	margin-bottom:200px;
 }
 
@@ -672,6 +680,35 @@ fieldset {
 	margin-top:50px;
 	margin-bottom:50px;
 
+}
+
+.bta  {
+	font-size:1em;
+	margin-top:80px;
+}
+
+.fa-arrow-left {
+	color:#ff6600;
+}
+
+.fa-arrow-right {
+	color:#ff6600;
+}
+
+.read-more {
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+.su {
+	width:100px;
+}
+
+.user-name {
+	width:200px;
+}
+
+.user-email {
+	width:200px;
 }
 
 .form-errors p{
@@ -774,7 +811,39 @@ fieldset {
 	text-align:left;
 }
 
-.news-story p{
-	font-weight:normal;
-	font-size:1em;
+.full h1, .full h2, .full h3, .full h4 {
+	text-align:left;
+}
+
+.rh h1, .rh h2, .rh h3, .rh h4 {
+	text-align:left;
+}
+
+.prs {
+	margin:40px 0 20px;
+}
+
+.pr-body p{
+	font-size:1.2em;
+	font-weight:300;
+
+}
+
+.pr-body b{
+
+	font-weight:500;
+
+}
+
+.intro-p {
+	font-size:1.2em;
+	font-weight:300;
+}
+.full {
+	padding-top:40px;
+	padding-bottom:40px;
+}
+.rh {
+	padding-top:40px;
+	padding-bottom:40px;
 }

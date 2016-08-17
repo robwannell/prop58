@@ -8,6 +8,7 @@ Rails.application.routes.draw do
  end
 
   resources :endorsements
+  resources :users
  # Login and Logout
     get '/signup' => 'users#new'
     post '/users' => 'users#create'

@@ -11,35 +11,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160815232537) do
+ActiveRecord::Schema.define(version: 20160817202634) do
 
   create_table "endorsements", force: :cascade do |t|
-    t.string   "firstname"
-    t.string   "lastname"
-    t.string   "title"
-    t.string   "organization"
-    t.integer  "row_order"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.string   "category"
-    t.integer  "ranking"
+    t.string   "firstname",    limit: 255
+    t.string   "lastname",     limit: 255
+    t.string   "title",        limit: 255
+    t.string   "organization", limit: 255
+    t.integer  "row_order",    limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.string   "category",     limit: 255
+    t.integer  "ranking",      limit: 4
   end
+
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.string   "slug",           limit: 255, null: false
+    t.integer  "sluggable_id",   limit: 4,   null: false
+    t.string   "sluggable_type", limit: 50
+    t.string   "scope",          limit: 255
+    t.datetime "created_at"
+  end
+
+  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
+  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
   create_table "pressreleases", force: :cascade do |t|
-    t.string   "title"
+    t.string   "title",      limit: 255
     t.datetime "publish_at"
-    t.text     "intro"
-    t.text     "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "intro",      limit: 65535
+    t.text     "body",       limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.string   "slug",       limit: 255
   end
 
+  add_index "pressreleases", ["slug"], name: "index_pressreleases_on_slug", unique: true, using: :btree
+
   create_table "users", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "name",            limit: 255
+    t.string   "email",           limit: 255
+    t.string   "password_digest", limit: 255
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
 end

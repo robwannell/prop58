@@ -10,6 +10,7 @@ class PressreleasesController < ApplicationController
   # GET /pressreleases/1
   # GET /pressreleases/1.json
   def show
+   @prs = Pressrelease.all
   end
 
   # GET /pressreleases/new
@@ -64,7 +65,7 @@ class PressreleasesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_pressrelease
-      @pressrelease = Pressrelease.find(params[:id])
+      @pressrelease = Pressrelease.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
