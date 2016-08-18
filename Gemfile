@@ -29,7 +29,7 @@ gem 'bootstrap_form'
 gem 'bcrypt', '~> 3.1.7'
 gem 'ranked-model'
 
-gem "paperclip", "~> 3.5.3"
+gem "paperclip", "~> 4.3"
 
 gem 'summernote-rails'
 
