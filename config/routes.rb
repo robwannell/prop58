@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
  
  
+ resources :news
  resources :pressreleases
  
- resources :endorsements do
-   post :update_row_order, on: :collection
- end
+
 
   resources :endorsements
   resources :users

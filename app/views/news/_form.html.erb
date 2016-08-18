@@ -1,0 +1,68 @@
+
+
+<%= bootstrap_form_for(@news) do |f| %>
+  
+	 <fieldset class="form-group">
+  <div class="field">
+
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+			
+	  <div class="field">
+   
+	    <%= f.text_field :published_at, label:"When do you want the story to appear as published?", :id => "datepicker" %>
+	  </div>
+			
+ 	  <% unless @news.avatar.blank? %>
+ 	  <p><b>Current image</b><br/><%= link_to (image_tag @news.avatar.url(:thumb)), @news.avatar.url(:original), target: '_blank' %> </p><%= f.file_field :avatar, label: 'Add a new image', class: 'choose-image'%></p>
+ 	  <% else %>
+ 	  <div class="field">
+ 	  <%= f.file_field :avatar, label: 'Add an image for this story - ', class: 'choose-image'%>
+   </div>
+ 	  <% end %>
+
+    <%= f.text_area :intro %>
+  </div>
+  <div class="field">
+   
+     <%= f.text_area :body , id: "summernote"%>
+  </div>
+ 
+ <div class="actions pull-right">
+   <%= f.submit %>
+ </div>
+<% end %>
+
+<script type="text/javascript">
+$('#summernote').summernote({
+	 shortcuts: false,
+	dialogsInBody: false,
+	popover:false,
+  toolbar: [
+    // [groupName, [list of button]]
+			 ['para', ['style', 'ul']],
+	  ['insert', ['link']],
+	  ['image', ['none']],
+    ['style', ['bold', 'italic', 'underline', 'clear']]	
+   
+  ],
+		styleTags: ['p', 'h4']
+});
+</script>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+
+<script>
+$( function() {
+	$( "#datepicker" ).datepicker({
+	  dateFormat: "yy-mm-dd"
+	});
+} );
+
+
+</script>
+

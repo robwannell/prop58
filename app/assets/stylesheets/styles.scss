@@ -71,17 +71,11 @@ p{
 	color:#fff;
 }
 
-.logo-default  {
-	padding-top:0px;
-	margin-top:0;
-	border:5px solid #fff;
-}
 
-.logo-small  {
-	padding-top:0px;
-	margin-top:0;
-	border:5px solid #fff;
 
+.logo-small {
+	border:5px solid #fff;
+	margin:10px 0px 10px 0;
 }
 
 .header-container {
@@ -150,9 +144,7 @@ ul.nav a:hover { color: #fff !important;
 
 
 .navbar-brand {
-	padding-top:20px;
-	padding-bottom:10px;
-	padding-right:30px;
+	
 }
 .donate-button {
 	background:#ff6600;
@@ -807,6 +799,11 @@ input {
 .news-story {
 	text-align:left;
 }
+
+.news-img {
+	width:100%;
+	height:auto;
+}
 .news-story h1, .news-story h2, .news-story h3 {
 	text-align:left;
 }
@@ -835,6 +832,10 @@ input {
 
 }
 
+.news-intro {
+	font-size:1.2em;
+	font-weight:500;
+}
 .intro-p {
 	font-size:1.2em;
 	font-weight:300;
@@ -846,4 +847,7 @@ input {
 .rh {
 	padding-top:40px;
 	padding-bottom:40px;
+}
+
+.share {
 }

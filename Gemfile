@@ -29,6 +29,8 @@ gem 'bootstrap_form'
 gem 'bcrypt', '~> 3.1.7'
 gem 'ranked-model'
 
+gem "paperclip", "~> 5.0.0"
+
 gem 'summernote-rails'
 
 gem 'jquery-ui-rails'

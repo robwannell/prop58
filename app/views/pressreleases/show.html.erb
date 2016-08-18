@@ -1,3 +1,8 @@
+<%= content_for :head do %>
+<script type='text/javascript' data-cfasync='false' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='d3c4bd175e9934de774db0f74d58ac29' async='async'></script>
+<% end %>
+
+
 <%= content_for :full do %>
 
 <div class="col-md-8 full">
@@ -8,6 +13,8 @@
 
 <h6 class="text-muted"><%= @pressrelease.publish_at.strftime("%B %d %Y")%></h6> 
 
+	<div class='shareaholic-canvas share' data-app='share_buttons' data-app-id='25528828'></div>
+	
 <p class="lead">
  
   <%= @pressrelease.intro %>

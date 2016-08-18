@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160817202634) do
+ActiveRecord::Schema.define(version: 20160818201010) do
 
   create_table "endorsements", force: :cascade do |t|
     t.string   "firstname",    limit: 255
@@ -37,6 +37,22 @@ ActiveRecord::Schema.define(version: 20160817202634) do
   add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
+
+  create_table "news", force: :cascade do |t|
+    t.string   "title",               limit: 255
+    t.text     "intro",               limit: 65535
+    t.text     "body",                limit: 65535
+    t.string   "published_at",        limit: 255
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.string   "avatar_file_name",    limit: 255
+    t.string   "avatar_content_type", limit: 255
+    t.integer  "avatar_file_size",    limit: 4
+    t.datetime "avatar_updated_at"
+    t.string   "slug",                limit: 255
+  end
+
+  add_index "news", ["slug"], name: "index_news_on_slug", unique: true, using: :btree
 
   create_table "pressreleases", force: :cascade do |t|
     t.string   "title",      limit: 255

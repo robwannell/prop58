@@ -1,6 +1,6 @@
 class PressreleasesController < ApplicationController
   before_action :set_pressrelease, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authorize, except: [:index, :show]
   # GET /pressreleases
   # GET /pressreleases.json
   def index

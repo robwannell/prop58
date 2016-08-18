@@ -1,15 +1,5 @@
 <%= bootstrap_form_for(@pressrelease) do |f| %>
-  <% if @pressrelease.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@pressrelease.errors.count, "error") %> prohibited this pressrelease from being saved:</h2>
-
-      <ul>
-      <% @pressrelease.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+ 
 
 	 <fieldset class="form-group">
 		
@@ -30,6 +20,7 @@
   </div>
 <% end %>
 
+</fieldset>
 
 <script type="text/javascript">
 $('#summernote').summernote({
