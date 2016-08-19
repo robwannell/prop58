@@ -5,6 +5,7 @@ class PressreleasesController < ApplicationController
   # GET /pressreleases.json
   def index
     @pressreleases = Pressrelease.all
+    @title = "Press Releases"
   end
 
   # GET /pressreleases/1

@@ -3,6 +3,7 @@ class ContactController < ApplicationController
   
      @contact = Contact.new
      @support = ['Distribute Materials', 'Write an opinion editorial', 'Communicate with employees/members','Volunteer/Speak at local events', 'Write a letter-to-the editor', 'Our organization offers speakers in the following languages (use comment box)']
+     @title = "Contact us"
    end
    
    

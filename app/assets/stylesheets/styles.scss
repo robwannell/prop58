@@ -451,7 +451,8 @@ footer {
     padding-top: 50px;
 	padding-bottom:40px;
     text-align: center;
-    background: #F1FBFF;
+				 background: #fff;
+   
 }
 
 .a-section p {
@@ -463,7 +464,7 @@ footer {
     padding-top: 50px;
 	padding-bottom:40px;
     text-align: center;
-    background: #fff;
+    background: #F1FBFF;
 }
 
 .b-section p {
@@ -795,7 +796,12 @@ input {
 .rails-bootstrap-forms-error-summary {
   margin-top: 10px;
 }
-
+h4.also-news {
+	text-transform:uppercase;
+	color:#2A6288;
+	background: #EAF9FE;
+	padding:10px;
+}
 .news-story {
 	text-align:left;
 }
@@ -841,7 +847,7 @@ input {
 
 .date-col {
 	padding-left:0px;
-	padding-top:3px;
+	padding-top:4px;
 }
 .share-col {
 		

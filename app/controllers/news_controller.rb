@@ -5,13 +5,14 @@ before_filter :authorize, except: [:index, :show]
   # GET /news.json
   def index
     @news = News.all
-    
+    @title = "News"
   end
 
   # GET /news/1
   # GET /news/1.json
   def show
    @ns = News.all
+  
   end
 
   # GET /news/new

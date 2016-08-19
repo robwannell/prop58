@@ -7,7 +7,7 @@ before_filter :authorize, except: [:index]
    
   def index
     @endorsement = Endorsement.all
- 
+    @title = "Endorsements for Prop 58"
   end
   
  
