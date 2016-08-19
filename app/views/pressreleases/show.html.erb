@@ -13,9 +13,14 @@
   <%= @pressrelease.title %>
 </h2>
 
-<h6 class="text-muted"><%= @pressrelease.publish_at.strftime("%B %d %Y")%></h6> 
-
-	<div class='shareaholic-canvas share' data-app='share_buttons' data-app-id='25528828'></div>
+<div class="date-share-row">
+<div class="col-sm-4 date-col">
+<h6 class="text-muted"><%= @pressrelease.publish_at.to_time.strftime('%B %d %Y')%></h6> 
+</div>
+<div class="col-sm-8 share-col">
+	<div class='shareaholic-canvas share-icons' data-app='share_buttons' data-app-id='25528828'></div>
+</div>
+</div>
 	
 <p class="lead">
  

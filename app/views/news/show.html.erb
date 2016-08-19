@@ -2,6 +2,7 @@
 <script type='text/javascript' data-cfasync='false' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='2a3a338d5a793821ef975b0f0e3b37ae' async='async'></script>
 
 
+
 <% end %>
 
 <%= content_for :full do %>
@@ -12,10 +13,16 @@
   <%= @news.title %>
 </h2>
 
+<div class="date-share-row">
+<div class="col-sm-4 date-col">
 <h6 class="text-muted"><%= @news.published_at.to_time.strftime('%B %d %Y')%></h6> 
+</div>
+<div class="col-sm-8 share-col">
+	<div class='shareaholic-canvas share-icons' data-app='share_buttons' data-app-id='25528828'></div>
+</div>
+</div>
 
-	<div class='shareaholic-canvas' data-app='share_buttons' data-app-id='25528828'></div>
-	
+
  <% if @news.avatar.blank? %>
  
 	
