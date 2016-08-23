@@ -63,9 +63,36 @@
 		<div>
 			<%= render 'layouts/toolkit'%>
 		</div>
-		
-		
+
+
     <section class="a-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+
+<!-- info and factsheet dl -->
+																	
+<h2>Download Prop 58 Materials</h2>
+
+<p>You can also download the Frequently Asked Questions and a Prop 58 Fact Sheet. <p>Please help get the word out about Yes on Prop58 by sharing with your friends and colleagues.</p>
+
+
+<div class="action-icon col-lg-3 offset-lg-3"><%= link_to (image_tag 'faq.png', class: "download-sheet"), 'downloads/LEARN_FAQ.pdf' , download: "LEARN_FAQ.pdf", :type => 'application/pdf', :disposition => 'attachment', target: "_blank"%> <h4><%= link_to 'Prop 58 - LEARN FAQs', 'downloads/LEARN_FAQ.pdf' , download: "LEARN_FAQ.pdf", :type => 'application/pdf', :disposition => 'attachment', target: "_blank"%></h4></div>
+
+<div class="action-icon col-lg-3"><%= link_to (image_tag 'infographic.png', class: "download-sheet"),  'downloads/prop58_factsheet.pdf' , download: "prop58_factsheet", :type => 'application/pdf', :disposition => 'attachment', target: "_blank"%><h4><%= link_to 'Prop 58 - Quick Facts', 'downloads/prop58_factsheet.pdf' , download: "prop58_factsheet", :type => 'application/pdf', :disposition => 'attachment', target: "_blank"%></h4></div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+				
+				
+						
+		
+    <section class="b-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 offset-md-1">
@@ -83,7 +110,7 @@
         </div>
     </section>
 	
-																															    <section class="b-section">
+																															    <section class="a-section">
 																															        <div class="container">
 																															            <div class="row">
 																															                <div class="col-lg-10 offset-md-1">
