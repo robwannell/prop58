@@ -32,18 +32,18 @@ html {
 
   }
 
-  .learn-title  h1{
+  h1.learn-title  {
   	font-size:2em;
 
   }
 
-  .learn-title  h2{
+  h2.learn-title  {
   	font-size:1.4em;
 
 
   }
 
-  .learn-title h2 strong{
+  h2.learn-title  strong{
   	color:#29618C;
   }
 
@@ -189,6 +189,27 @@ html {
 clear:both;
   padding-top: 0px;
   font-size:3em;
+}
+
+.skip-signup {
+	font-size:0.5em
+}
+
+.modal-header {
+	font-size:0.5em
+}
+
+.modal-header h2{
+	font-size:1.4em
+
+}
+
+.modal-body {
+	font-size:0.7em
+}
+.modal-body p {
+	font-size:0.7em
+
 }
 
 }
