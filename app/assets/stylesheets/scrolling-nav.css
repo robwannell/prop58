@@ -17,101 +17,118 @@ html {
 
 
 
-@media(max-width:767px) {
-    .navbar {
-					font-size:2em;
-    }
-			
-			
-}
 
 
 
 
 /* Medium devices (desktops, 992px and up) */
-@media (max-width: 992px) { 
+@media (max-width: 992px) {
+
+
+
+  .drops {
+  	width:280px;
+  	font-size:1em;
+
+  }
+
+  .learn-title  h1{
+  	font-size:2em;
+
+  }
+
+  .learn-title  h2{
+  	font-size:1.4em;
+
+
+  }
+
+  .learn-title h2 strong{
+  	color:#29618C;
+  }
+
+
+
 	.navbar {
-	 	
-	 
-	   
-   
+
+
+
+
 	}
-	
+
 	ul.nav {
 
-		
-		
+
+
 	}
 	.navbar .navbar-nav {
 			font-size:0.8em;
 	  float: none;
 			clear:left;
-		
+
 	}
 
-		
+
  }
- @media (max-width: 992px) { 
-		
-		
+ @media (max-width: 1025px) {
+   .navbar .navbar-nav {
+       font-size:0.8em;
+     float: none;
+       clear:left;
+
+   }
+ }
+
+ @media (max-width: 992px) {
+
+
 	 .navbar {
 	 	background:transparent;
 	    min-height:135px;
 	    margin-bottom:0;
 	    border:0px;
 	    border-bottom:0px;
-   	
+
 	    text-transform: uppercase;
 	    font-family:  "proxima-nova",sans-serif;
 	    font-weight:bold;
 	 }
-		
-	ul.nav {
-		
-		font-size:0.6em;
-		
-	}
-	
-	.nav>li {
-		font-size:0.8em;
-		text-align:center;
-		padding:0px 0;
-		
-	}
+
+
 	.footernav ul {
 		margin-left:0;
 		padding-left:0;
 	}
 	.footernav li{
-		
+
 		display:block;
 		clear:left;
 	}
-	
-	
-	
+
+
+
 
   }
 
 @media(max-width:767px) {
-	
+
 	.navbar {
-		
+
  	background:transparent;
     min-height:135px;
     margin-bottom:0;
     border:0px;
     border-bottom:0px;
-  	
+
     text-transform: uppercase;
     font-family:  "proxima-nova",sans-serif;
     font-weight:bold;
-				
-	   
-   
+
+
+
 	}
-	
-	
+
+
 	.nav>ul {
 		margin-top:120px;
 		clear:left;
@@ -121,27 +138,28 @@ html {
 		font-size:1em;
 		text-align:center;
 		padding:20px 0;
-		
+
 	  float: none;
 	}
-	
-	
-	
+
+
+
+
 	.logo-container {
 		width:20%;
-		
+
 		text-align:left;
-		
+
 	}
-	
+
 	.intro-section {
 	    min-height: 500px;
 	    padding-top: 50px;
 		padding-bottom:40px;
 	    text-align: center;
-  
+
 	}
-	
+
 	.intro-section h1 {
 		text-transform:uppercase;
 		color:#fff;
@@ -158,8 +176,41 @@ html {
 
 }
 
+@media(max-width:415px) {
+    .navbar .navbar-nav {
+  			font-size:0.5em;
+
+  	}
+
+    .navbar-toggler {
+      float:right;
+    }
+.in {
+clear:both;
+  padding-top: 0px;
+  font-size:3em;
+}
+
+}
+
+@media(max-width:865px) {
+    .navbar .navbar-nav {
+  			font-size:0.5em;
+
+  	}
+
+    .navbar-toggler {
+      float:right;
+    }
+.in {
+
+
+}
+
+}
+
+
 
 /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
-The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
+The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
 of those sections to manage the look and feel of the site. */
-
