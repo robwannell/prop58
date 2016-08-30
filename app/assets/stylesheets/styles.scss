@@ -157,7 +157,7 @@ ul.nav a:hover { color: #fff !important;
    margin-bottom:0;
    border:0px;
    border-bottom:0px;
-   font-size:1.1em;
+   font-size:1.2em;
    text-transform: uppercase;
    font-family:  "proxima-nova",sans-serif;
    font-weight:bold;
@@ -322,7 +322,8 @@ footer {
 	list-style:none;
 	text-transform:uppercase;
 	font-size:1em;display: inline-block;
-	padding:20px;
+	padding:10px;
+	
 }
 
 .navbar-centered .footnav > li > a {
@@ -331,6 +332,7 @@ footer {
 
 .footer-col li a {
 	color:#fff;
+
 }
 
 .footer-col li a:hover {
