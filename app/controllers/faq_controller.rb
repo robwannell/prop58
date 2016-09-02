@@ -1,6 +1,6 @@
 class FaqController < ApplicationController
- 
+
   def index
-   @title = "Frquently Asked Questions"
+   @title = "Frequently Asked Questions"
   end
 end
