@@ -6,21 +6,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                   
-					
-                    
+
+
+
                 </div>
             </div>
         </div>
     </section>
 </div>
-					
-<% end %>														
+
+<% end %>
 <div class="sub-intro-section">
         <div class="container">
             <div class="row ">
 								 <h2>Endorsements for LEARN</h2>
-														
+
 	<% if current_user %><div class="edit alert" >
 	 <%= link_to ' Add a new endorsement', new_endorsement_path, class: "admin-edit fa fa-plus", dismissible: true %>
 
@@ -30,171 +30,210 @@
 
 	 </div>
 	 <% end %>
-		
-															
-			 
+
+
+
 			  <p>This initiative expands opportunities for all students and is supported by a bipartisan coalition of parents, educators and business leaders.</p>
-									
-						<h3>To add your name to the growing list of LEARN supporters, just <%= link_to 'fill out this form', contact_path %>.</h3>					
-									
-									
+
+						<h3>To add your name to the growing list of LEARN supporters, just <%= link_to 'fill out this form', contact_path %>.</h3>
+
+
 
 </p>
 
 </div>
 </div>
 </div>
-   
+
     <section class="a-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 offset-md-1 endorsers">
                     <h2>Organizations</h2>
-																	
-																				
+
+
 <table class="table" >
-  
- 
+
+
     <% @endorsement.each do |endorsement| %>
 				<% if endorsement.category == '1' %>
       <tr class="item">
         <td>
 									<% if current_user %><span class="badge"> <%= endorsement.ranking %></span><% end %>
           <%= endorsement.organization %>
-        
+
 															<% if current_user %>
 														<span class="edit-endorsement edit" >
 								 <i> <%= link_to ' Edit ', edit_endorsement_path(endorsement), class: "admin-edit fa fa-edit", dismissible: true %> </i>|<i> <%= link_to ' Delete', endorsement, method: :delete, data: { confirm: 'Are you sure?' }, class: "admin-edit fa fa-trash" %></i>
- 
- 
-   
+
+
+
 								 </span>
          	<% end %>
         </td>
       </tr>
     <% end %>
 				<% end %>
- 
+
 </table>
 
 
-														 
-																																																
+
+
 
                 </div>
             </div>
         </div>
     </section>
-	
 
-																													    <section class="b-section">
-																													        <div class="container">
-																													            <div class="row">
-																													                <div class="col-lg-10 offset-md-1 endorsers">
-																													                     <h2>Elected Officials</h2>
-																																																																																							
+
+    <section class="b-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-md-1 endorsers">
+                    <h2>Newspapers</h2>
+
+
+    <table class="table" >
+
+
+    <% @endorsement.each do |endorsement| %>
+        <% if endorsement.category == '5' %>
+      <tr class="item">
+        <td>
+                  <% if current_user %><span class="badge"> <%= endorsement.ranking %></span><% end %>
+          <%= endorsement.organization %>
+
+                              <% if current_user %>
+                            <span class="edit-endorsement edit" >
+                 <i> <%= link_to ' Edit ', edit_endorsement_path(endorsement), class: "admin-edit fa fa-edit", dismissible: true %> </i>|<i> <%= link_to ' Delete', endorsement, method: :delete, data: { confirm: 'Are you sure?' }, class: "admin-edit fa fa-trash" %></i>
+
+
+
+                 </span>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+        <% end %>
+
+    </table>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+	    <section class="a-section">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-lg-10 offset-md-1 endorsers">
+	                     <h2>Elected Officials</h2>
+
 <table class="table  " id="sortable2">
-  
- 
+
+
       <% @endorsement.each do |endorsement| %>
 						<% if endorsement.category == '2' %>
       <tr  class="item">
         <td >
 										<% if current_user %><span class="badge"> <%= endorsement.ranking %></span><% end %>
-										
+
           <%= endorsement.title %> <%= endorsement.firstname %> <%= endorsement.lastname %> <%= endorsement.organization %>
-        
+
 															<% if current_user %>
 														<span class="edit-endorsement edit" >
 								 <i> <%= link_to ' Edit ', edit_endorsement_path(endorsement), class: "admin-edit fa fa-edit", dismissible: true %> </i>|<i> <%= link_to ' Delete', endorsement, method: :delete, data: { confirm: 'Are you sure?' }, class: "admin-edit fa fa-trash" %></i>
- 
- 
-   
+
+
+
 								 </span>
          	<% end %>
         </td>
       </tr>
     <% end %>
 				<% end %>
- 
+
 </table>
 																												                </div>
 																												            </div>
 																												        </div>
 																												    </section>
 
-								    <section class="a-section">
+								    <section class="b-section">
 								        <div class="container">
 								            <div class="row">
 								                <div class="col-lg-10 offset-md-1 endorsers">
 								                    <h2>Educators and Community Leaders</h2>
 																																																																																																																																															<table class="table  " id="sortable3">
-  
- 
+
+
 																																																																																																																																													      <% @endorsement.each do |endorsement| %>
 																																																																																																																																																			<% if endorsement.category == '3' %>
 																																																																																																																																															      <tr class="item">
 																																																																																																																																															        <td >
 																																																																																																																																															       	<% if current_user %><span class="badge"> <%= endorsement.ranking %></span><% end %>
-																																																																																																																																																							
-																																																																																																																																																							 <%= endorsement.title %> <%= endorsement.firstname %> <%= endorsement.lastname %><% unless endorsement.organization.blank? %>, <b><%= endorsement.organization %></b><% end %> 
-        
+
+																																																																																																																																																							 <%= endorsement.title %> <%= endorsement.firstname %> <%= endorsement.lastname %><% unless endorsement.organization.blank? %>, <b><%= endorsement.organization %></b><% end %>
+
 																																																																																																																																																														<% if current_user %>
 																																																																																																																																																													<span class="edit-endorsement edit" >
 																																																																																																																																																							 <i> <%= link_to ' Edit ', edit_endorsement_path(endorsement), class: "admin-edit fa fa-edit", dismissible: true %> </i>|<i> <%= link_to ' Delete', endorsement, method: :delete, data: { confirm: 'Are you sure?' }, class: "admin-edit fa fa-trash" %></i>
- 
- 
-   
+
+
+
 																																																																																																																																																							 </span>
 																																																																																																																																															         	<% end %>
 																																																																																																																																															        </td>
 																																																																																																																																															      </tr>
 																																																																																																																																															    <% end %>
 																																																																																																																																																			<% end %>
- 
+
 																																																																																																																																															</table>
-																																																																																																																																																																																																																																																																																																																																															
+
 <h2>School Districts</h2>
 																																																																																																																																													<table class="table  " id="sortable4">
-  
- 
+
+
 																																																																																																																																										      <% @endorsement.each do |endorsement| %>
 																																																																																																																																																<% if endorsement.category == '4' %>
 																																																																																																																																													      <tr data-item-id=<%= "#{endorsement.id}" %> class="item table-sortable">
 																																																																																																																																													        <td >
 																											<% if current_user %><span class="badge"> <%= endorsement.ranking %></span><% end %>
 																																																																																																																																															         <%= endorsement.organization %>
-        
+
 																																																																																																																																																												<% if current_user %>
 																																																																																																																																																											<span class="edit-endorsement edit" >
 																																																																																																																																																					 <i> <%= link_to ' Edit ', edit_endorsement_path(endorsement), class: "admin-edit fa fa-edit", dismissible: true %> </i>|<i> <%= link_to ' Delete', endorsement, method: :delete, data: { confirm: 'Are you sure?' }, class: "admin-edit fa fa-trash" %></i>
- 
- 
-   
+
+
+
 																																																																																																																																																					 </span>
 																																																																																																																																													         	<% end %>
 																																																																																																																																													        </td>
 																																																																																																																																													      </tr>
 																																																																																																																																													    <% end %>
 																																																																																																																																																	<% end %>
- 
+
 																																																																																																																																													</table>
 																																																																																																																																																																																																																																																																																																																																																																																																																													 </div>
        </div>
    </div>
 </section>
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											    <section class="b-section">
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											    <section class="a-section">
 																																																																																																																																																																																																																																				        <div class="container">
 																																																																																																																																																																																																																													            <div class="row">
 																																																																																																																																																																																																																																																																																													                <div class="col-lg-10 offset-md-1">
 <div class="support-58">
-																																																														<h1>Support our students by adding your name 
+																																																														<h1>Support our students by adding your name
 to the list of endorsers that are voting YES on 58</h1>
 																																																				<p><%= link_to 'Support Prop 58', support_path, class: "btn btn-primary" %></p>																																																																																																																																																																																																																																																																																																							                </div>
 																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													            </div>
 																																																																																																																																																																																																																																																																																																																																																												        </div>
 																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											    </section>
-	
-	
-    

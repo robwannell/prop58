@@ -3,7 +3,7 @@
 	padding:10px;
 	width:100%;
 	text-align:center;
-	
+
 }
 
 .modal-header {
@@ -817,17 +817,29 @@ input {
 }
 
 .admin-info {
-	background:#FAF5C6;
-	padding:5px 10px;
-	color:#93C960;
-	border-radius: 5px;
-	margin-bottom:20px;
+
 }
 
 .admin-info p {
 	padding:0px 0;
 	font-size:1em;
 	font-weight:bold;
+
+}
+
+#flip {
+	color:#5CC9F5;
+	text-decoration: underline;
+    padding: 5px 10px;
+}
+
+#panel {
+	background:#EAF9FE;
+	padding:5px 10px;
+	color:#014D87;
+	border-radius: 5px;
+	margin-bottom:20px;
+display: none;
 }
 
 .rails-bootstrap-forms-date-select,

@@ -1,53 +1,61 @@
 
-	
-	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
 <%= bootstrap_form_for(@endorsement) do |f| %>
   <% if @endorsement.errors.any? %>
     <div id="error_explanation" class="form-errors">
       <p><%= pluralize(@endorsement.errors.count, "error") %> prohibited this endorsement from being saved:</p>
 
-      
+
     </div>
   <% end %>
-<div class="admin-info">
-<p>Ranking allows you to order elected officials according to their seniority, rather than alphabetically.
 
-<p>Spread out the ranks and you will be able to insert an in-between office later on if needed.
 
-<p>For example, 100, 200, 300 etc is better than 1,2,3...</p>
-</div>
+
+
  <fieldset class="form-group">
-		
+
 	 <div class="controls ">
-	  <%= f.text_field :ranking, placeholder: "10, 50, 1000, etc... 0 is highest", label: "Ranking"%>
+		  <%= f.label :ranking %><span id="flip">What's this?</span>
+			<div id="panel"><p>Ranking allows you to order elected officials according to their seniority, rather than alphabetically.
+
+			<p>Spread out the ranks and you will be able to insert an in-between office later on if needed.
+
+			<p>For example, 100, 200, 300 etc is better than 1,2,3...</p>
+		</div>
+	  <%= f.text_field :ranking, placeholder: "10, 50, 1000, etc... 0 is highest", hide_label: true%>
 	 </div>
- 
+
  <div class="controls ">
   <%= f.text_field :title, placeholder: "Governor, Councilmember, etc", label: "Title (for electeds)"%>
  </div>
-	
+
   <div class="controls">
 	  <%= f.text_field :firstname %>
-  </div>	
-		
+  </div>
+
   <div class="controls">
 	  <%= f.text_field :lastname %>
   </div>
-		
- 
+
+
   <div class="controls">
 	  <%= f.text_field :organization, label: "Organization / District (or office to be displayed after name)"%>
   </div>
-		
+
   <div class="controls">
-	<%= f.select :category,  [["Organization", 1], [ "Elected Official",2], ["Educators and Community Leaders",3], ["School District",4] ],{ include_blank: true , label: "Please choose one:" }, { class: "selectpicker" } %>
+	<%= f.select :category,  [["Organization", 1], ["Newspaper",5], [ "Elected Official",2], ["Educators and Community Leaders",3], ["School District",4] ],{ include_blank: true , label: "Please choose one:" }, { class: "selectpicker" } %>
   </div>
-  
+
 </fieldset>
 
   <div class="actions pull-right">
     <%= f.submit %>
   </div>
 <% end %>
-
-
