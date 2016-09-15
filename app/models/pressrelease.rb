@@ -6,5 +6,6 @@ class Pressrelease < ActiveRecord::Base
   validates :intro, presence: true
   validates :body, presence: true
   
-  
+   default_scope  {order 'published_at DESC'}
+   
 end

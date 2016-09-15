@@ -8,4 +8,6 @@ class News < ActiveRecord::Base
  validates_attachment :avatar,
    content_type: { content_type: ["image/jpg", "image/JPEG", "image/JPG", "image/jpeg", "image/gif", "image/png"] }
    
+    default_scope  {order 'published_at DESC'}
+    
 end
